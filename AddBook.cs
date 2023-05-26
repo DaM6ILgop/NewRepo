@@ -10,36 +10,22 @@ using System.Windows.Forms;
 
 namespace Kyrsovaya_Ivan
 {
-    public partial class AdminForm : Form
+    public partial class AddBook : Form
     {
-        public AdminForm()
+        public AddBook()
         {
             InitializeComponent();
         }
-        private void RefreshList()
-        {
-            listView1.Items.Clear();
-            foreach (Books s in Form1.list)
-            {
-                listView1.Items.Add(s.ToListItem());
-            }
-        }
 
-        private void AdminForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void AddBook_Click(object sender, EventArgs e)
+        private void AdminRefrestList_Click(object sender, EventArgs e)
         {
             Books book = new Books();
             book.BookName = BookName.Text;
-            book.Genre = Genre.Text;
+            book.Genre = comboBox2.Text; //Жанры. Надо допилить класс
             book.Author = Author.Text;
             book.YearOfPublish = YearOfPublish.Text;
             book.Price = Price.Text;
-            book.Author = Presence.Text;
-            book.Author = BookName.Text;
+            book.Presence = comboBox1.Text;//Наличие книги. Надо добавить
             Form1.list.Add(book);
             this.Hide();
         }
