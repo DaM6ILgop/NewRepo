@@ -35,14 +35,14 @@ namespace Kyrsovaya_Ivan
         private void button1_Click(object sender, EventArgs e)
         {
             AdminForm adminForm = new AdminForm();
-            if (textBox1.Text == login && textBox2.Text == password)
+            if (login_textBox.Text == login && password_textBox.Text == password)
             {
                 adminForm.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Введенный логин или пароль неверны.\nПопробуйте еще раз!");
+                MessageBox.Show("Неправельный Логин или Пароль!");
             }
         }
 
@@ -58,14 +58,14 @@ namespace Kyrsovaya_Ivan
         private void label3_MouseEnter(object sender, EventArgs e)
         {
             // Изменение стиля при наведении курсора
-            label3.BackColor = Color.FromArgb(75, 95, 95);
-            label3.BorderStyle = BorderStyle.FixedSingle;
+            guestLogin.BackColor = Color.FromArgb(75, 95, 95);
+            guestLogin.BorderStyle = BorderStyle.FixedSingle;
         }
         private void label3_MouseLeave(object sender, EventArgs e)
         {
             // Изменение стиля при покидании курсора
-            label3.BackColor = Color.Transparent;
-            label3.BorderStyle = BorderStyle.None;
+            guestLogin.BackColor = Color.Transparent;
+            guestLogin.BorderStyle = BorderStyle.None;
         }
 
 
@@ -74,11 +74,11 @@ namespace Kyrsovaya_Ivan
         {
             if (checkBox1.Checked)
             {
-                textBox2.PasswordChar = '\0'; // Показать пароль
+                password_textBox.PasswordChar = '\0'; // Показать пароль
             }
             else
             {
-                textBox2.PasswordChar = '*'; // Скрыть пароль звездочками
+                password_textBox.PasswordChar = '*'; // Скрыть пароль звездочками
             }
         }
 
@@ -87,7 +87,7 @@ namespace Kyrsovaya_Ivan
         {
             if (!checkBox1.Checked)// проверка на активность чек бокса
             {
-                textBox2.PasswordChar = '*'; // Скрыть пароль звездочками
+                password_textBox.PasswordChar = '*'; // Скрыть пароль звездочками
             }
         }
     }
