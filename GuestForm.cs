@@ -21,5 +21,7 @@ namespace Kyrsovaya_Ivan
         {
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
         }
+
+
     }
 }
