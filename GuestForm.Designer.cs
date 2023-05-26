@@ -41,10 +41,15 @@ namespace Kyrsovaya_Ivan
             this.genre = new System.Windows.Forms.Label();
             this.buttonChooseBasket = new System.Windows.Forms.Button();
             this.buttonBasket = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -53,7 +58,7 @@ namespace Kyrsovaya_Ivan
             this.columnHeader5,
             this.columnHeader6});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1, 0);
+            this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(957, 369);
             this.listView1.TabIndex = 0;
@@ -92,7 +97,8 @@ namespace Kyrsovaya_Ivan
             // 
             // checkBox1
             // 
-            this.checkBox1.Location = new System.Drawing.Point(236, 376);
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBox1.Location = new System.Drawing.Point(236, 379);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(113, 27);
             this.checkBox1.TabIndex = 1;
@@ -102,6 +108,7 @@ namespace Kyrsovaya_Ivan
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Фантастика",
@@ -110,15 +117,16 @@ namespace Kyrsovaya_Ivan
             "Ужасы",
             "Историческое",
             "Комедия"});
-            this.comboBox1.Location = new System.Drawing.Point(62, 375);
+            this.comboBox1.Location = new System.Drawing.Point(62, 378);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 2;
             // 
             // genre
             // 
+            this.genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.genre.AutoSize = true;
-            this.genre.Location = new System.Drawing.Point(5, 377);
+            this.genre.Location = new System.Drawing.Point(5, 380);
             this.genre.Name = "genre";
             this.genre.Size = new System.Drawing.Size(51, 20);
             this.genre.TabIndex = 3;
@@ -126,7 +134,8 @@ namespace Kyrsovaya_Ivan
             // 
             // buttonChooseBasket
             // 
-            this.buttonChooseBasket.Location = new System.Drawing.Point(730, 375);
+            this.buttonChooseBasket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChooseBasket.Location = new System.Drawing.Point(730, 378);
             this.buttonChooseBasket.Name = "buttonChooseBasket";
             this.buttonChooseBasket.Size = new System.Drawing.Size(228, 37);
             this.buttonChooseBasket.TabIndex = 4;
@@ -135,30 +144,45 @@ namespace Kyrsovaya_Ivan
             // 
             // buttonBasket
             // 
-            this.buttonBasket.Location = new System.Drawing.Point(730, 433);
+            this.buttonBasket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBasket.Location = new System.Drawing.Point(730, 436);
             this.buttonBasket.Name = "buttonBasket";
             this.buttonBasket.Size = new System.Drawing.Size(228, 35);
             this.buttonBasket.TabIndex = 5;
             this.buttonBasket.Text = "Корзина";
             this.buttonBasket.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.buttonBasket);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.buttonChooseBasket);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.genre);
+            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(965, 485);
+            this.panel1.TabIndex = 6;
+            // 
             // GuestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 480);
-            this.Controls.Add(this.buttonBasket);
-            this.Controls.Add(this.buttonChooseBasket);
-            this.Controls.Add(this.genre);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(980, 527);
             this.Name = "GuestForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestForm";
             this.Activated += new System.EventHandler(this.GuestForm_Activated);
             this.Load += new System.EventHandler(this.GuestForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -176,5 +200,6 @@ namespace Kyrsovaya_Ivan
         private System.Windows.Forms.Label genre;
         private System.Windows.Forms.Button buttonChooseBasket;
         private System.Windows.Forms.Button buttonBasket;
+        private System.Windows.Forms.Panel panel1;
     }
 }
