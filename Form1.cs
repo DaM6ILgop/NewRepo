@@ -23,11 +23,7 @@ namespace Kyrsovaya_Ivan
             StartPosition = FormStartPosition.CenterScreen;
             BackColor = Color.DarkGray;
         }
-
-        /*пошел нахер, казел*/
-        //Ну и пошел ты
-/**/
-
+        //лтд
 
 
         private void Form1_Load(object sender, EventArgs e)
