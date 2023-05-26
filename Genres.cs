@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace Kyrsovaya_Ivan
 {
-    internal class Genre
+    internal class GenresClass
     {
-        public string Name { get; set; }
-
-        public Genre(string name)
+        public static List<string> GetGenres()
         {
-            Name = name;
+            List<string> genres = new List<string>()
+            {
+                "Фантастика",
+                "Роман",
+                "Детектив",
+                "Фэнтези",
+                "Ужасы"
+            };
+
+            return genres;
         }
     }
 }
