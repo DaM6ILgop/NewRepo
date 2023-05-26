@@ -33,11 +33,7 @@ namespace Kyrsovaya_Ivan
             book.Author = Presence.Text;
             book.Author = BookName.Text;
             Form1.list.Add(book);
-            this.Close();
-            
-            
-
-
+            this.Hide();
         }
     }
 }
