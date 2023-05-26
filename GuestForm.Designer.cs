@@ -155,6 +155,7 @@ namespace Kyrsovaya_Ivan
             this.Controls.Add(this.listView1);
             this.Name = "GuestForm";
             this.Text = "GuestForm";
+            this.Activated += new System.EventHandler(this.GuestForm_Activated);
             this.Load += new System.EventHandler(this.GuestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

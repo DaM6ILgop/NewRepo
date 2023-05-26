@@ -12,7 +12,7 @@ namespace Kyrsovaya_Ivan
 {
     public partial class GuestForm : Form
     {
-        static internal List<Books> list = new List<Books>();
+        
 
         public GuestForm()
         {
@@ -23,7 +23,7 @@ namespace Kyrsovaya_Ivan
         private void RefreshList()
         {
             listView1.Items.Clear();
-            foreach (Books s in list)
+            foreach (Books s in Form1.list)
             {
                listView1.Items.Add(s.ToListItem());
             }
@@ -34,5 +34,9 @@ namespace Kyrsovaya_Ivan
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
         }
 
+        private void GuestForm_Activated(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
     }
 }

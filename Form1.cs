@@ -16,6 +16,10 @@ namespace Kyrsovaya_Ivan
         public string login = "ivan123";
         public string password = "1234";
 
+        internal GuestForm guest = new GuestForm();
+
+        static internal List<Books> list = new List<Books>();
+
 
         public Form1()
         {
@@ -49,7 +53,7 @@ namespace Kyrsovaya_Ivan
         // ОБРАБОТЧИК НАЖАТИЯ НА LABEL_3
         private void label3_Click(object sender, EventArgs e)
         {
-            GuestForm guest = new GuestForm();
+            
             guest.Show();
             this.Hide();
         }

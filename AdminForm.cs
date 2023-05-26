@@ -25,8 +25,19 @@ namespace Kyrsovaya_Ivan
         private void AddBook_Click(object sender, EventArgs e)
         {
             Books book = new Books();
+            book.BookName = BookName.Text;
+            book.Genre = Genre.Text;
+            book.Author = Author.Text;
+            book.YearOfPublish = YearOfPublish.Text;
+            book.Price = Price.Text;
+            book.Author = Presence.Text;
+            book.Author = BookName.Text;
+            Form1.list.Add(book);
+            this.Close();
             
-            Form1.list.Add(student);
+            
+
+
         }
     }
 }
