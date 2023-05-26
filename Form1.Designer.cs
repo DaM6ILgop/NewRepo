@@ -141,6 +141,8 @@ namespace Kyrsovaya_Ivan
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_textBox);
             this.Controls.Add(this.login_textBox);
+            this.MaximumSize = new System.Drawing.Size(508, 538);
+            this.MinimumSize = new System.Drawing.Size(508, 538);
             this.Name = "Form1";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form1_Load);
