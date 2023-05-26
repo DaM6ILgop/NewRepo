@@ -38,5 +38,11 @@ namespace Kyrsovaya_Ivan
         {
             RefreshList();
         }
+
+        private void buttonBasket_Click(object sender, EventArgs e)
+        {
+            BasketForm basketForm = new BasketForm();
+            basketForm.Show();
+        }
     }
 }
