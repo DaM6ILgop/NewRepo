@@ -32,6 +32,8 @@ namespace Kyrsovaya_Ivan
         private void GuestForm_Load(object sender, EventArgs e)
         {
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
+            List<string> genres = GenresClass.GetGenres();
+            comboBox1.Items.AddRange(genres.ToArray());
         }
 
         private void GuestForm_Activated(object sender, EventArgs e)
@@ -47,8 +49,11 @@ namespace Kyrsovaya_Ivan
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<string> genres = GenresClass.GetGenres();
-            comboBox1.Items.AddRange(genres.ToArray());
+            
+            //for(int i = 0; i > genres.ToArray().Length; i++) 
+            //{
+            //    comboBox1.Items.Add(((string)genres[i]));
+            //}
         }
     }
 }
