@@ -110,17 +110,11 @@ namespace Kyrsovaya_Ivan
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Фантастика",
-            "Драма",
-            "Фэнтези",
-            "Ужасы",
-            "Историческое",
-            "Комедия"});
             this.comboBox1.Location = new System.Drawing.Point(62, 378);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // genre
             // 

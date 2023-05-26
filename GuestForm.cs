@@ -44,5 +44,11 @@ namespace Kyrsovaya_Ivan
             BasketForm basketForm = new BasketForm();
             basketForm.Show();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<string> genres = GenresClass.GetGenres();
+            comboBox1.Items.AddRange(genres.ToArray());
+        }
     }
 }
