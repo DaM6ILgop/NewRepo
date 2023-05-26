@@ -17,7 +17,7 @@ namespace Kyrsovaya_Ivan
             InitializeComponent();
         }
 
-        private void RefreshList()
+        public void RefreshList()
         {
             listView1.Items.Clear();
             foreach (Books s in Form1.list)
@@ -30,6 +30,7 @@ namespace Kyrsovaya_Ivan
         {
             RefreshList();
             this.FormClosed += (sender, e) => Application.Exit();
+            
         }
 
         private void AddBook_Click(object sender, EventArgs e)

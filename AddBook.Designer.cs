@@ -35,7 +35,7 @@ namespace Kyrsovaya_Ivan
             this.Price = new System.Windows.Forms.TextBox();
             this.AdminRefrestList = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Genre = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BookName
@@ -91,20 +91,20 @@ namespace Kyrsovaya_Ivan
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 7;
             // 
-            // comboBox2
+            // Genre
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(83, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 28);
-            this.comboBox2.TabIndex = 8;
+            this.Genre.FormattingEnabled = true;
+            this.Genre.Location = new System.Drawing.Point(83, 92);
+            this.Genre.Name = "Genre";
+            this.Genre.Size = new System.Drawing.Size(151, 28);
+            this.Genre.TabIndex = 8;
             // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 450);
-            this.Controls.Add(this.comboBox2);
+            this.ClientSize = new System.Drawing.Size(319, 450);
+            this.Controls.Add(this.Genre);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.AdminRefrestList);
             this.Controls.Add(this.Price);
@@ -113,6 +113,7 @@ namespace Kyrsovaya_Ivan
             this.Controls.Add(this.BookName);
             this.Name = "AddBook";
             this.Text = "AddBook";
+            this.Load += new System.EventHandler(this.AddBook_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,6 +127,6 @@ namespace Kyrsovaya_Ivan
         private System.Windows.Forms.TextBox Price;
         private System.Windows.Forms.Button AdminRefrestList;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox Genre;
     }
 }

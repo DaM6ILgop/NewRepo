@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kyrsovaya_Ivan
@@ -21,17 +15,21 @@ namespace Kyrsovaya_Ivan
         {
             Books book = new Books();
             book.BookName = BookName.Text;
-            book.Genre = comboBox2.Text; //Жанры. Надо допилить класс
+            book.Genre = Genre.Text; //Жанры. Надо допилить класс
             book.Author = Author.Text;
             book.YearOfPublish = YearOfPublish.Text;
             book.Price = Price.Text;
             book.Presence = comboBox1.Text;//Наличие книги. Надо добавить
             Form1.list.Add(book);
+            Form1.adminForm.RefreshList();
+            Form1.adminForm.Show();
             this.Close();
+        }
 
-            AdminForm add = new AdminForm();
-            add.Show();
-            
+        private void AddBook_Load(object sender, EventArgs e)
+        {
+            List<string> genres = GenresClass.GetGenres();
+            Genre.Items.AddRange(genres.ToArray());
         }
     }
 }
