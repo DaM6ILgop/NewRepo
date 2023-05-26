@@ -16,24 +16,24 @@ namespace Kyrsovaya_Ivan
         {
             InitializeComponent();
         }
+        private void RefreshList()
+        {
+            listView1.Items.Clear();
+            foreach (Books s in Form1.list)
+            {
+                listView1.Items.Add(s.ToListItem());
+            }
+        }
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
+            RefreshList();
         }
 
         private void AddBook_Click(object sender, EventArgs e)
         {
-            Books book = new Books();
-            book.BookName = BookName.Text;
-            book.Genre = Genre.Text;
-            book.Author = Author.Text;
-            book.YearOfPublish = YearOfPublish.Text;
-            book.Price = Price.Text;
-            book.Author = Presence.Text;
-            book.Author = BookName.Text;
-            Form1.list.Add(book);
-            this.Hide();
+            AddBook add = new AddBook();
+            add.Show();
         }
     }
 }
