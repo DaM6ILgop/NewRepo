@@ -24,7 +24,12 @@ namespace Kyrsovaya_Ivan
             BackColor = Color.DarkGray;
         }
 
+        /**/
+
 /**/
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormClosed += (sender, e) => Application.Exit();//принудительное закрытие всех форм после нажатия на крестик
