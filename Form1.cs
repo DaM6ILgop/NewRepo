@@ -13,8 +13,8 @@ namespace Kyrsovaya_Ivan
     public partial class Form1 : Form
     {
         //ПОЛЯ ЛОГИНА И ПАРОЛЯ
-        public string login = "ivan123";
-        public string password = "1234";
+        public string login = "1";
+        public string password = "1";
 
         static internal GuestForm guest = new GuestForm();
 
