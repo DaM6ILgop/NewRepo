@@ -24,7 +24,7 @@ namespace Kyrsovaya_Ivan
             BackColor = Color.DarkGray;
         }
 
-        /*ты лох*/
+        /*сам ты хуй саси*/
 
 /**/
 
