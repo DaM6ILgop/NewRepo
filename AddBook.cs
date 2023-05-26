@@ -27,7 +27,11 @@ namespace Kyrsovaya_Ivan
             book.Price = Price.Text;
             book.Presence = comboBox1.Text;//Наличие книги. Надо добавить
             Form1.list.Add(book);
-            this.Hide();
+            this.Close();
+
+            AdminForm add = new AdminForm();
+            add.Show();
+            
         }
     }
 }

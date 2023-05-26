@@ -16,6 +16,7 @@ namespace Kyrsovaya_Ivan
         {
             InitializeComponent();
         }
+
         private void RefreshList()
         {
             listView1.Items.Clear();
@@ -28,19 +29,13 @@ namespace Kyrsovaya_Ivan
         private void AdminForm_Load(object sender, EventArgs e)
         {
             RefreshList();
+            this.FormClosed += (sender, e) => Application.Exit();
         }
 
         private void AddBook_Click(object sender, EventArgs e)
         {
-            Books book = new Books();
-            book.BookName = BookName.Text;
-            book.Genre = Genre.Text;
-            book.Author = Author.Text;
-            book.YearOfPublish = YearOfPublish.Text;
-            book.Price = Price.Text;
-            book.Author = Presence.Text;
-            book.Author = BookName.Text;
-            Form1.list.Add(book);
+            AddBook add = new AddBook();
+            add.Show();
             this.Hide();
         }
     }

@@ -29,21 +29,21 @@ namespace Kyrsovaya_Ivan
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("");
             this.AddBook = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.DeleteBook = new System.Windows.Forms.Button();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.DeleteBook = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddBook
@@ -67,27 +67,18 @@ namespace Kyrsovaya_Ivan
             this.columnHeader6});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.listView1.Location = new System.Drawing.Point(-3, 2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(967, 369);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // DeleteBook
-            // 
-            this.DeleteBook.Location = new System.Drawing.Point(797, 377);
-            this.DeleteBook.Name = "DeleteBook";
-            this.DeleteBook.Size = new System.Drawing.Size(167, 78);
-            this.DeleteBook.TabIndex = 10;
-            this.DeleteBook.Text = "Удалить книгу";
-            this.DeleteBook.UseVisualStyleBackColor = true;
             // 
             // columnHeader1
             // 
@@ -112,6 +103,15 @@ namespace Kyrsovaya_Ivan
             // columnHeader6
             // 
             this.columnHeader6.Text = "Наличие";
+            // 
+            // DeleteBook
+            // 
+            this.DeleteBook.Location = new System.Drawing.Point(797, 377);
+            this.DeleteBook.Name = "DeleteBook";
+            this.DeleteBook.Size = new System.Drawing.Size(167, 78);
+            this.DeleteBook.TabIndex = 10;
+            this.DeleteBook.Text = "Удалить книгу";
+            this.DeleteBook.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 

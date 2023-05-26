@@ -17,6 +17,7 @@ namespace Kyrsovaya_Ivan
         public string password = "1";
 
         static internal GuestForm guest = new GuestForm();
+        static internal AdminForm adminForm = new AdminForm();
 
         static internal List<Books> list = new List<Books>();
 
@@ -38,7 +39,7 @@ namespace Kyrsovaya_Ivan
         //КНОПКА ВЫЗОВА ФОРМЫ АДМИНА
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminForm adminForm = new AdminForm();
+            
             if (login_textBox.Text == login && password_textBox.Text == password)
             {
                 adminForm.Show();
