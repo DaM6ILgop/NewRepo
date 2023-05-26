@@ -18,8 +18,7 @@ namespace Kyrsovaya_Ivan
 
         internal ListViewItem ToListItem()
         {
-
-            return new ListViewItem(new string[] { BookName });
+            return new ListViewItem(new string[] { BookName, Genre, Author, YearOfPublish, Price, Presence});
         }
 
     }

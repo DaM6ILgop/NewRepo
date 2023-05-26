@@ -22,5 +22,11 @@ namespace Kyrsovaya_Ivan
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
         }
 
+        private void AddBook_Click(object sender, EventArgs e)
+        {
+            Books book = new Books();
+            
+            Form1.list.Add(student);
+        }
     }
 }
