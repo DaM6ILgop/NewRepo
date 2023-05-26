@@ -17,6 +17,7 @@ namespace Kyrsovaya_Ivan
         public GuestForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void RefreshList()
