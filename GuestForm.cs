@@ -61,10 +61,7 @@ namespace Kyrsovaya_Ivan
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            //for(int i = 0; i > genres.ToArray().Length; i++) 
-            //{
-            //    comboBox1.Items.Add(((string)genres[i]));
-            //}
+           
         }
     }
 }
