@@ -7,11 +7,12 @@ namespace Kyrsovaya_Ivan
     public partial class AdminForm : Form
     {
         static internal Files file = new Files();
+        static internal string Item;
         public AdminForm()
         {
             InitializeComponent();
         }
-        
+
         //Метод обновления списка
         public void RefreshList()
         {
@@ -30,7 +31,8 @@ namespace Kyrsovaya_Ivan
         private void AdminForm_Load(object sender, EventArgs e)
         {
             //RefreshList();
-            if(File.Exists("Books.txt")){
+            if (File.Exists("Books.txt"))
+            {
                 file.ReadFromFile("Books.txt");
                 RefreshList();
             }
@@ -45,15 +47,28 @@ namespace Kyrsovaya_Ivan
             this.Hide();
         }
 
-       
+
         //Кнопка открытия формы для удаления книги
         private void DelItemList_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0) {
+            if (listView1.SelectedItems.Count > 0)
+            {
 
                 listView1.Items.Remove(listView1.SelectedItems[0]);
 
             }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Item = listView1.FocusedItem.Text;
+                EditForm edit = new EditForm();
+                edit.Show();
+                this.Hide();
+            }
+            catch { }
         }
     }
 }
