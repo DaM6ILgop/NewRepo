@@ -44,11 +44,14 @@ namespace Kyrsovaya_Ivan
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.DeleteBook = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddBook
             // 
-            this.AddBook.Location = new System.Drawing.Point(11, 377);
+            this.AddBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddBook.Location = new System.Drawing.Point(12, 406);
             this.AddBook.Name = "AddBook";
             this.AddBook.Size = new System.Drawing.Size(167, 77);
             this.AddBook.TabIndex = 6;
@@ -58,6 +61,9 @@ namespace Kyrsovaya_Ivan
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -75,7 +81,7 @@ namespace Kyrsovaya_Ivan
             listViewItem4,
             listViewItem5,
             listViewItem6});
-            this.listView1.Location = new System.Drawing.Point(-3, 3);
+            this.listView1.Location = new System.Drawing.Point(12, 13);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(967, 369);
@@ -91,7 +97,7 @@ namespace Kyrsovaya_Ivan
             // columnHeader2
             // 
             this.columnHeader2.Text = "Жанр";
-            this.columnHeader2.Width = 220;
+            this.columnHeader2.Width = 210;
             // 
             // columnHeader3
             // 
@@ -115,7 +121,8 @@ namespace Kyrsovaya_Ivan
             // 
             // DeleteBook
             // 
-            this.DeleteBook.Location = new System.Drawing.Point(797, 377);
+            this.DeleteBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeleteBook.Location = new System.Drawing.Point(812, 406);
             this.DeleteBook.Name = "DeleteBook";
             this.DeleteBook.Size = new System.Drawing.Size(167, 77);
             this.DeleteBook.TabIndex = 10;
@@ -123,17 +130,29 @@ namespace Kyrsovaya_Ivan
             this.DeleteBook.UseVisualStyleBackColor = true;
             this.DeleteBook.Click += new System.EventHandler(this.DelItemList_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.AddBook);
+            this.panel1.Controls.Add(this.DeleteBook);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(994, 499);
+            this.panel1.TabIndex = 11;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 467);
-            this.Controls.Add(this.DeleteBook);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.AddBook);
+            this.ClientSize = new System.Drawing.Size(993, 499);
+            this.Controls.Add(this.panel1);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +167,6 @@ namespace Kyrsovaya_Ivan
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         internal System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
