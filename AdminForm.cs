@@ -42,12 +42,10 @@ namespace Kyrsovaya_Ivan
         //Кнопка открытия формы для удаления книги
         private void DelItemList_Click(object sender, EventArgs e)
         {
-
             if (listView1.SelectedItems.Count > 0) {
+
                 listView1.Items.Remove(listView1.SelectedItems[0]);
-
             }
-
         }
     }
 }
