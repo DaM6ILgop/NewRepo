@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Kyrsovaya_Ivan
 {
     public partial class AdminForm : Form
     {
+        static internal Files file = new Files();
         public AdminForm()
         {
             InitializeComponent();
         }
-
+        
         //Метод обновления списка
         public void RefreshList()
         {
@@ -19,6 +21,7 @@ namespace Kyrsovaya_Ivan
 
                 listView1.Items.Add(s.ToListItem());
             }
+
         }
 
         //Метод загрузки формы. Обновление списка срабатывает после запуска формы.
@@ -26,7 +29,11 @@ namespace Kyrsovaya_Ivan
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            RefreshList();
+            //RefreshList();
+            if(File.Exists("Books.txt")){
+                file.ReadFromFile("Books.txt");
+                RefreshList();
+            }
             this.FormClosed += (sender, e) => Application.Exit();
         }
 
@@ -44,7 +51,8 @@ namespace Kyrsovaya_Ivan
         {
             if (listView1.SelectedItems.Count > 0) {
 
-                listView1.Items.Remove(listView1.SelectedItems[0]);  
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+
             }
         }
     }
