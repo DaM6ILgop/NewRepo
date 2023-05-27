@@ -41,6 +41,9 @@
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnNameBook,
             this.columnHeader1,
@@ -79,6 +82,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.buttonDelet);
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.listView1);
@@ -89,6 +95,7 @@
             // 
             // buttonDelet
             // 
+            this.buttonDelet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDelet.Location = new System.Drawing.Point(576, 373);
             this.buttonDelet.Name = "buttonDelet";
             this.buttonDelet.Size = new System.Drawing.Size(213, 65);
@@ -98,6 +105,7 @@
             // 
             // buttonBuy
             // 
+            this.buttonBuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonBuy.Location = new System.Drawing.Point(11, 373);
             this.buttonBuy.Name = "buttonBuy";
             this.buttonBuy.Size = new System.Drawing.Size(213, 65);
