@@ -19,7 +19,7 @@ namespace Kyrsovaya_Ivan
             book.Author = Author.Text;
             book.YearOfPublish = Convert.ToInt32(YearOfPublish.Text);
             book.Price = Convert.ToInt32(Price.Text);
-            book.Presence = comboBox1.Text;//Наличие книги. Надо добавить
+            book.Presence = comboBox1.Text;//Наличие книги. Надо добавить           
             Form1.list.Add(book);
             Form1.adminForm.RefreshList();
             Form1.adminForm.Show();
