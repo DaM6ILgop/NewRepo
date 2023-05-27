@@ -19,7 +19,7 @@ namespace Kyrsovaya_Ivan
             {
                 while (streamreader.Peek() > -1)
                 {
-                    TempList.Add(streamreader.ReadLine().Split());
+                    TempList.Add(streamreader.ReadLine().Split(" , "));
                 }
             }
             con.convert(TempList);
@@ -32,7 +32,7 @@ namespace Kyrsovaya_Ivan
             {
                 for (int i = 0; i < Form1.list.Count; i++)
                 {
-                    string writeStr = Form1.list[i].BookName + " " + Form1.list[i].Genre + " " + Form1.list[i].Author + " " + Form1.list[i].YearOfPublish+ " " + Form1.list[i].Price + " " + Form1.list[i].Presence;
+                    string writeStr = Form1.list[i].BookName + " , " + Form1.list[i].Genre + " , " + Form1.list[i].Author + " , " + Form1.list[i].YearOfPublish+ " , " + Form1.list[i].Price + " , " + Form1.list[i].Presence;
                     streamwriter.WriteLine(writeStr);
                 }
             }
