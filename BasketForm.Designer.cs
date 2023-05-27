@@ -78,7 +78,7 @@
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 120;
             // 
-            // panel1
+            // buttonBuy
             // 
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.buttonBuy);
@@ -91,23 +91,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(504, 280);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(576, 373);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 49);
+            this.button2.Size = new System.Drawing.Size(212, 65);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // buttonBuy
-            // 
-            this.buttonBuy.Location = new System.Drawing.Point(10, 280);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(186, 49);
-            this.buttonBuy.TabIndex = 1;
-            this.buttonBuy.Text = "Купить";
-            this.buttonBuy.UseVisualStyleBackColor = true;
             // 
             // BasketForm
             // 
@@ -132,7 +121,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDelet;
         private System.Windows.Forms.Button buttonBuy;
     }
 }

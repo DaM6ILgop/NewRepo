@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kyrsovaya_Ivan
@@ -47,10 +40,13 @@ namespace Kyrsovaya_Ivan
 
        
         //Кнопка открытия формы для удаления книги
-        private void OpenDelForm_Click(object sender, EventArgs e)
+        private void DelItemList_Click(object sender, EventArgs e)
         {
 
-            
+            if (listView1.SelectedItems.Count > 0) {
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+
+            }
 
         }
     }

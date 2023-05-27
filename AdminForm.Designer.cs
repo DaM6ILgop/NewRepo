@@ -118,7 +118,7 @@ namespace Kyrsovaya_Ivan
             this.DeleteBook.TabIndex = 10;
             this.DeleteBook.Text = "Удалить книгу";
             this.DeleteBook.UseVisualStyleBackColor = true;
-            this.DeleteBook.Click += new System.EventHandler(this.OpenDelForm_Click);
+            this.DeleteBook.Click += new System.EventHandler(this.DelItemList_Click);
             // 
             // AdminForm
             // 
