@@ -34,7 +34,7 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonDelet = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonBuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,10 +46,13 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
+            this.listView1.Location = new System.Drawing.Point(10, 9);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 355);
+            this.listView1.Size = new System.Drawing.Size(680, 267);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -75,40 +78,33 @@
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 120;
             // 
-            // panel1
+            // buttonBuy
             // 
-            this.panel1.Controls.Add(this.buttonDelet);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(700, 338);
             this.panel1.TabIndex = 1;
             // 
-            // buttonDelet
+            // button2
             // 
-            this.buttonDelet.Location = new System.Drawing.Point(576, 373);
-            this.buttonDelet.Name = "buttonDelet";
-            this.buttonDelet.Size = new System.Drawing.Size(212, 65);
-            this.buttonDelet.TabIndex = 2;
-            this.buttonDelet.Text = "Удалить";
-            this.buttonDelet.UseVisualStyleBackColor = true;
-            // 
-            // buttonBuy
-            // 
-            this.buttonBuy.Location = new System.Drawing.Point(12, 373);
-            this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(212, 65);
-            this.buttonBuy.TabIndex = 1;
-            this.buttonBuy.Text = "Купить";
-            this.buttonBuy.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(576, 373);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(212, 65);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // BasketForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BasketForm";
             this.Text = "BasketForm";
             this.Load += new System.EventHandler(this.BasketForm_Load);
