@@ -45,6 +45,7 @@ namespace Kyrsovaya_Ivan
             if (listView1.SelectedItems.Count > 0) {
 
                 listView1.Items.Remove(listView1.SelectedItems[0]);
+                Form1.adminForm
             }
         }
     }
