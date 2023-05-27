@@ -34,7 +34,7 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonDelet = new System.Windows.Forms.Button();
             this.buttonBuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,10 +49,9 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 9);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Location = new System.Drawing.Point(11, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(680, 267);
+            this.listView1.Size = new System.Drawing.Size(777, 355);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -80,42 +79,38 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonDelet);
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 338);
+            this.panel1.Size = new System.Drawing.Size(800, 451);
             this.panel1.TabIndex = 1;
             // 
-            // button2
+            // buttonDelet
             // 
-            this.button2.Location = new System.Drawing.Point(504, 280);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDelet.Location = new System.Drawing.Point(576, 373);
+            this.buttonDelet.Name = "buttonDelet";
+            this.buttonDelet.Size = new System.Drawing.Size(213, 65);
+            this.buttonDelet.TabIndex = 2;
+            this.buttonDelet.Text = "Удалить";
+            this.buttonDelet.UseVisualStyleBackColor = true;
             // 
             // buttonBuy
             // 
-            this.buttonBuy.Location = new System.Drawing.Point(10, 280);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuy.Location = new System.Drawing.Point(11, 373);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(186, 49);
+            this.buttonBuy.Size = new System.Drawing.Size(213, 65);
             this.buttonBuy.TabIndex = 1;
             this.buttonBuy.Text = "Купить";
             this.buttonBuy.UseVisualStyleBackColor = true;
             // 
             // BasketForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BasketForm";
             this.Text = "BasketForm";
             this.Load += new System.EventHandler(this.BasketForm_Load);
@@ -132,7 +127,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDelet;
         private System.Windows.Forms.Button buttonBuy;
     }
 }
