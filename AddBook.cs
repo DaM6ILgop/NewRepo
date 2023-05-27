@@ -17,8 +17,8 @@ namespace Kyrsovaya_Ivan
             book.BookName = BookName.Text;
             book.Genre = Genre.Text; //Жанры. Надо допилить класс
             book.Author = Author.Text;
-            book.YearOfPublish = YearOfPublish.Text;
-            book.Price = Price.Text;
+            book.YearOfPublish = Convert.ToInt32(YearOfPublish.Text);
+            book.Price = Convert.ToInt32(Price.Text);
             book.Presence = comboBox1.Text;//Наличие книги. Надо добавить
             Form1.list.Add(book);
             Form1.adminForm.RefreshList();

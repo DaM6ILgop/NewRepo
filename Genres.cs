@@ -8,18 +8,22 @@ namespace Kyrsovaya_Ivan
 {
     internal class GenresClass
     {
+        static internal List<string> genres = new List<string>()
+        {
+          "Фантастика",
+          "Роман",
+          "Детектив",
+          "Фэнтези",
+          "Ужасы"
+        };
         public static List<string> GetGenres()
         {
-            List<string> genres = new List<string>()
-            {
-                "Фантастика",
-                "Роман",
-                "Детектив",
-                "Фэнтези",
-                "Ужасы"
-            };
-
             return genres;
+        }
+
+        public static void SetGenres(string genre)
+        {
+            genres.Add(genre);
         }
     }
 }
