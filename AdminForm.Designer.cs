@@ -48,9 +48,10 @@ namespace Kyrsovaya_Ivan
             // 
             // AddBook
             // 
-            this.AddBook.Location = new System.Drawing.Point(12, 377);
+            this.AddBook.Location = new System.Drawing.Point(10, 283);
+            this.AddBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBook.Name = "AddBook";
-            this.AddBook.Size = new System.Drawing.Size(167, 78);
+            this.AddBook.Size = new System.Drawing.Size(146, 58);
             this.AddBook.TabIndex = 6;
             this.AddBook.Text = "Добавить книгу";
             this.AddBook.UseVisualStyleBackColor = true;
@@ -65,6 +66,8 @@ namespace Kyrsovaya_Ivan
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
@@ -74,9 +77,10 @@ namespace Kyrsovaya_Ivan
             listViewItem5,
             listViewItem6});
             this.listView1.Location = new System.Drawing.Point(-3, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(967, 369);
+            this.listView1.Size = new System.Drawing.Size(847, 278);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -107,9 +111,10 @@ namespace Kyrsovaya_Ivan
             // 
             // DeleteBook
             // 
-            this.DeleteBook.Location = new System.Drawing.Point(797, 377);
+            this.DeleteBook.Location = new System.Drawing.Point(697, 283);
+            this.DeleteBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteBook.Name = "DeleteBook";
-            this.DeleteBook.Size = new System.Drawing.Size(167, 78);
+            this.DeleteBook.Size = new System.Drawing.Size(146, 58);
             this.DeleteBook.TabIndex = 10;
             this.DeleteBook.Text = "Удалить книгу";
             this.DeleteBook.UseVisualStyleBackColor = true;
@@ -117,12 +122,13 @@ namespace Kyrsovaya_Ivan
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 466);
+            this.ClientSize = new System.Drawing.Size(847, 350);
             this.Controls.Add(this.DeleteBook);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.AddBook);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
