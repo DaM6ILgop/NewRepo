@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Kyrsovaya_Ivan
 {
@@ -19,6 +20,7 @@ namespace Kyrsovaya_Ivan
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            comboBox1.KeyPress += (sender, e) => e.Handled = true;
         }
 
         public void RefreshList()
@@ -26,7 +28,7 @@ namespace Kyrsovaya_Ivan
             listView1.Items.Clear();
             foreach (Books s in Form1.list)
             {
-               listView1.Items.Add(s.ToListItem());
+                listView1.Items.Add(s.ToListItem());
             }
         }
 
@@ -45,6 +47,7 @@ namespace Kyrsovaya_Ivan
             this.FormClosed += (sender, e) => Application.Exit();
         }
 
+
         private void GuestForm_Activated(object sender, EventArgs e)
         {
             RefreshList();
@@ -56,13 +59,39 @@ namespace Kyrsovaya_Ivan
             basketForm.Show();
         }
 
+        //СОРТИРОВКА ПО ЖАНРУ
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            //for(int i = 0; i > genres.ToArray().Length; i++) 
-            //{
-            //    comboBox1.Items.Add(((string)genres[i]));
-            //}
+            string selectedGenre = comboBox1.SelectedItem.ToString();
+            listView1.Items.Clear();
+            foreach (Books book in Form1.list)
+            {
+                if (selectedGenre == "Все" || book.Genre == selectedGenre)
+                {
+                    listView1.Items.Add(book.ToListItem());
+                }
+            }
+        }
+        //СОРТИРОВКА ПО НАЛИЧИЮ
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            bool isAvailable = checkBox1.Checked;
+            listView1.Items.Clear();
+            foreach (Books book in Form1.list)
+            {
+                if (comboBox1.SelectedItem == null || comboBox1.SelectedItem.ToString() == "Все" || book.Genre == comboBox1.SelectedItem.ToString())
+                {
+                    if (isAvailable && book.Presence == "Да")
+                    {
+                        listView1.Items.Add(book.ToListItem());
+                    }
+                    else if (!isAvailable)
+                    {
+                        listView1.Items.Add(book.ToListItem());
+                    }
+                }
+            }
         }
     }
 }

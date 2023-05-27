@@ -107,13 +107,18 @@ namespace Kyrsovaya_Ivan
             this.checkBox1.Text = "В Наличии";
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Все"});
             this.comboBox1.Location = new System.Drawing.Point(62, 368);
             this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -175,7 +180,6 @@ namespace Kyrsovaya_Ivan
             this.Name = "GuestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestForm";
-            //this.Activated += new System.EventHandler(this.GuestForm_Activated);
             this.Load += new System.EventHandler(this.GuestForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
