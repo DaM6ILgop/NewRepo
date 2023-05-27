@@ -17,7 +17,7 @@ namespace Kyrsovaya_Ivan
         internal string Presence = "";
         internal List<string[]> BookList = new List<string[]>();
         internal List<string[]> PresenceList = new List<string[]>();
-        internal int RemoveItem;
+        
         internal ListViewItem ToListItem()
         {
             return new ListViewItem(new string[] { BookName, Genre, Author, Convert.ToString(YearOfPublish), Convert.ToString(Price), Presence});
