@@ -173,7 +173,7 @@ namespace Kyrsovaya_Ivan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 309);
+            this.ClientSize = new System.Drawing.Size(717, 314);
             this.Controls.Add(this.ReturnBttn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -188,6 +188,8 @@ namespace Kyrsovaya_Ivan
             this.Controls.Add(this.YearOfPublish);
             this.Controls.Add(this.Author);
             this.Controls.Add(this.BookName);
+            this.MaximumSize = new System.Drawing.Size(735, 361);
+            this.MinimumSize = new System.Drawing.Size(735, 361);
             this.Name = "AddBook";
             this.Text = "Добавить книгу";
             this.Load += new System.EventHandler(this.AddBook_Load);
