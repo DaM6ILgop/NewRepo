@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Kyrsovaya_Ivan
 {
     public partial class GuestForm : Form
     {
-        
+        static internal Files file = new Files();
 
         public GuestForm()
         {
@@ -20,7 +21,7 @@ namespace Kyrsovaya_Ivan
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void RefreshList()
+        public void RefreshList()
         {
             listView1.Items.Clear();
             foreach (Books s in Form1.list)
@@ -34,6 +35,14 @@ namespace Kyrsovaya_Ivan
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
             List<string> genres = GenresClass.GetGenres();
             comboBox1.Items.AddRange(genres.ToArray());
+
+            //RefreshList();
+            if (File.Exists("Books.txt"))
+            {
+                file.ReadFromFile("Books.txt");
+                RefreshList();
+            }
+            this.FormClosed += (sender, e) => Application.Exit();
         }
 
         private void GuestForm_Activated(object sender, EventArgs e)
