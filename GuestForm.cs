@@ -21,6 +21,7 @@ namespace Kyrsovaya_Ivan
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             comboBox1.KeyPress += (sender, e) => e.Handled = true;
+           
         }
 
         private void RefreshList()
@@ -37,6 +38,7 @@ namespace Kyrsovaya_Ivan
 
 
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
+
             List<string> genres = GenresClass.GetGenres();
             comboBox1.Items.AddRange(genres.ToArray());
 
