@@ -48,10 +48,9 @@ namespace Kyrsovaya_Ivan
             // 
             // AddBook
             // 
-            this.AddBook.Location = new System.Drawing.Point(10, 283);
-            this.AddBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddBook.Location = new System.Drawing.Point(11, 377);
             this.AddBook.Name = "AddBook";
-            this.AddBook.Size = new System.Drawing.Size(146, 58);
+            this.AddBook.Size = new System.Drawing.Size(167, 77);
             this.AddBook.TabIndex = 6;
             this.AddBook.Text = "Добавить книгу";
             this.AddBook.UseVisualStyleBackColor = true;
@@ -76,11 +75,10 @@ namespace Kyrsovaya_Ivan
             listViewItem4,
             listViewItem5,
             listViewItem6});
-            this.listView1.Location = new System.Drawing.Point(-3, 2);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Location = new System.Drawing.Point(-3, 3);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(847, 278);
+            this.listView1.Size = new System.Drawing.Size(967, 369);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -88,33 +86,38 @@ namespace Kyrsovaya_Ivan
             // columnHeader1
             // 
             this.columnHeader1.Text = "Название книги";
+            this.columnHeader1.Width = 220;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Жанр";
+            this.columnHeader2.Width = 220;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Автор";
+            this.columnHeader3.Width = 200;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Год издания";
+            this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Цена";
+            this.columnHeader5.Width = 100;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Наличие";
+            this.columnHeader6.Width = 80;
             // 
             // DeleteBook
             // 
-            this.DeleteBook.Location = new System.Drawing.Point(697, 283);
-            this.DeleteBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteBook.Location = new System.Drawing.Point(797, 377);
             this.DeleteBook.Name = "DeleteBook";
-            this.DeleteBook.Size = new System.Drawing.Size(146, 58);
+            this.DeleteBook.Size = new System.Drawing.Size(167, 77);
             this.DeleteBook.TabIndex = 10;
             this.DeleteBook.Text = "Удалить книгу";
             this.DeleteBook.UseVisualStyleBackColor = true;
@@ -122,13 +125,12 @@ namespace Kyrsovaya_Ivan
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 350);
+            this.ClientSize = new System.Drawing.Size(968, 467);
             this.Controls.Add(this.DeleteBook);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.AddBook);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);

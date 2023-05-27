@@ -182,7 +182,7 @@ namespace Kyrsovaya_Ivan
             this.Name = "GuestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestForm";
-            this.Activated += new System.EventHandler(this.GuestForm_Activated);
+            //this.Activated += new System.EventHandler(this.GuestForm_Activated);
             this.Load += new System.EventHandler(this.GuestForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
