@@ -6,6 +6,7 @@ namespace Kyrsovaya_Ivan
 {
     public partial class AddBook : Form
     {
+        internal Files file = new Files();
         public AddBook()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace Kyrsovaya_Ivan
             book.Price = Convert.ToInt32(Price.Text);
             book.Presence = comboBox1.Text;//Наличие книги. Надо добавить
             Form1.list.Add(book);
+            file.WriteToFile("Books.txt");
+            file.ReadFromFile("Books.txt");
             Form1.adminForm.RefreshList();
             Form1.adminForm.Show();
             this.Close();

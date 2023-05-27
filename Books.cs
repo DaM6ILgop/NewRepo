@@ -15,8 +15,6 @@ namespace Kyrsovaya_Ivan
         internal int YearOfPublish = 0;
         internal int Price = 0;
         internal string Presence = "";
-        internal List<string[]> BookList = new List<string[]>();
-        internal List<string[]> PresenceList = new List<string[]>();
         
 
         internal ListViewItem ToListItem()
