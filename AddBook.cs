@@ -24,7 +24,7 @@ namespace Kyrsovaya_Ivan
             Form1.list.Add(book);
             file.WriteToFile("Books.txt");
             file.ReadFromFile("Books.txt");
-            Form1.adminForm.RefreshList();
+            Form1.adminForm.RefreshList();           
             Form1.adminForm.Show();
             this.Close();
         }

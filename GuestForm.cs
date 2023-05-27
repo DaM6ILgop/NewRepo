@@ -20,7 +20,7 @@ namespace Kyrsovaya_Ivan
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void RefreshList()
+        internal void RefreshList()
         {
             listView1.Items.Clear();
             foreach (Books s in Form1.list)
@@ -31,6 +31,8 @@ namespace Kyrsovaya_Ivan
 
         private void GuestForm_Load(object sender, EventArgs e)
         {
+
+
             this.FormClosed += (sender, e) => Application.Exit();//полезно для закрытия exe файла из диспетчера задач. Работает при закрытии формы на крестик
             List<string> genres = GenresClass.GetGenres();
             comboBox1.Items.AddRange(genres.ToArray());
