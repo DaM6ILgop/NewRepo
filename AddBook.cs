@@ -31,5 +31,11 @@ namespace Kyrsovaya_Ivan
             List<string> genres = GenresClass.GetGenres();
             Genre.Items.AddRange(genres.ToArray());
         }
+
+        private void ReturnBttn_Click(object sender, EventArgs e)
+        {
+            Form1.adminForm.Show();
+            this.Close();
+        }
     }
 }
