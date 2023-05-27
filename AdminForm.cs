@@ -52,12 +52,23 @@ namespace Kyrsovaya_Ivan
         //Кнопка открытия формы для удаления книги
         private void DelItemList_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
+            try
             {
-
-                listView1.Items.Remove(listView1.SelectedItems[0]);
-
+                Item = listView1.FocusedItem.Text;
+                foreach (Books row in Form1.list)
+                {
+                    if (row.BookName == AdminForm.Item)
+                    {
+                        int index = Form1.list.IndexOf(row);
+                        Form1.list.RemoveAt(index);
+                        break;
+                    }
+                }
+                file.WriteToFile("Books.txt");
+                file.ReadFromFile("Books.txt");
+                RefreshList();
             }
+            catch { }
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
