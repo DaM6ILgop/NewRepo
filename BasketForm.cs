@@ -12,7 +12,7 @@ namespace Kyrsovaya_Ivan
 {
     public partial class BasketForm : Form
     {
-        private List<Books> selectedBooks;
+        public List<Books> selectedBooks;
 
         public BasketForm(List<Books> selectedBooks)
         {
