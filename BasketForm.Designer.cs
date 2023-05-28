@@ -107,9 +107,10 @@
             // buttonDelet
             // 
             this.buttonDelet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelet.Location = new System.Drawing.Point(576, 373);
+            this.buttonDelet.Location = new System.Drawing.Point(504, 280);
+            this.buttonDelet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDelet.Name = "buttonDelet";
-            this.buttonDelet.Size = new System.Drawing.Size(213, 65);
+            this.buttonDelet.Size = new System.Drawing.Size(186, 49);
             this.buttonDelet.TabIndex = 2;
             this.buttonDelet.Text = "Удалить";
             this.buttonDelet.UseVisualStyleBackColor = true;
@@ -118,23 +119,14 @@
             // buttonBuy
             // 
             this.buttonBuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonBuy.Location = new System.Drawing.Point(11, 373);
+            this.buttonBuy.Location = new System.Drawing.Point(10, 280);
+            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(213, 65);
+            this.buttonBuy.Size = new System.Drawing.Size(186, 49);
             this.buttonBuy.TabIndex = 1;
             this.buttonBuy.Text = "Купить";
             this.buttonBuy.UseVisualStyleBackColor = true;
             this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
-            // 
-            // Назад
-            // 
-            this.Назад.Location = new System.Drawing.Point(612, 374);
-            this.Назад.Name = "Назад";
-            this.Назад.Size = new System.Drawing.Size(176, 66);
-            this.Назад.TabIndex = 3;
-            this.Назад.Text = "ReturnBttn";
-            this.Назад.UseVisualStyleBackColor = true;
-            this.Назад.Click += new System.EventHandler(this.Return_bttn_Click);
             // 
             // BasketForm
             // 
@@ -161,5 +153,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button buttonDelet;
         private System.Windows.Forms.Button buttonBuy;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

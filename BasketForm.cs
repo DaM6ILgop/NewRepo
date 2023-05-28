@@ -16,8 +16,7 @@ namespace Kyrsovaya_Ivan
         public BasketForm()
         {
             InitializeComponent();
-            this.selectedBooks = selectedBooks;
-            RefreshBasketList();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         public void RefreshBasketList()
@@ -27,6 +26,50 @@ namespace Kyrsovaya_Ivan
             {
                 listViewBasket.Items.Add(book.ToListItem());
             }
+        }
+
+        private void BasketForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                RefreshBasketList();
+            }
+            catch { }
+        }
+
+        private void buttonDelet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (ListViewItem selectedItem in listViewBasket.SelectedItems)
+                {
+                    Books selectedBook = new Books();
+                    selectedBook.BookName = selectedItem.SubItems[0].Text;
+                    selectedBook.Genre = selectedItem.SubItems[1].Text;
+                    selectedBook.Author = selectedItem.SubItems[2].Text;
+                    selectedBook.YearOfPublish = selectedItem.SubItems[3].Text;
+                    selectedBook.Price = Convert.ToInt32(selectedItem.SubItems[4].Text);
+                    selectedBook.Presence = selectedItem.SubItems[5].Text;
+                    foreach (Books row in GuestForm.selectedBooks)
+                    {
+                        if (row.BookName == selectedBook.BookName && row.Author == selectedBook.Author && row.YearOfPublish == selectedBook.YearOfPublish)
+                        {
+                            int index = GuestForm.selectedBooks.IndexOf(row);
+                            GuestForm.selectedBooks.RemoveAt(index);
+                            break;
+                        }
+                    }
+                }
+                RefreshBasketList();
+                MessageBox.Show("Книга удалена!");
+            }
+            catch { }
+        }
+
+        private void buttonBuy_Click(object sender, EventArgs e)
+        {
+            file.WriteToFile("Cheque.txt", GuestForm.selectedBooks);
+            MessageBox.Show("Транзакция прошла!");
         }
     }
 }

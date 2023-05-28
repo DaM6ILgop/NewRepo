@@ -59,7 +59,9 @@ namespace Kyrsovaya_Ivan
 
         private void buttonBasket_Click(object sender, EventArgs e)
         {
-            basketForm.Show();
+            BasketForm basket = new BasketForm();
+            basket.Show();
+            this.Hide();
         }
 
         //СОРТИРОВКА ПО ЖАНРУ
@@ -100,10 +102,17 @@ namespace Kyrsovaya_Ivan
         private void buttonChooseBasket_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem selectedItem in listView1.SelectedItems)
-            {
-                Books selectedBook = (Books)selectedItem.Tag;
+            {              
+                Books selectedBook = new Books();
+                selectedBook.BookName = selectedItem.SubItems[0].Text;
+                selectedBook.Genre = selectedItem.SubItems[1].Text;
+                selectedBook.Author = selectedItem.SubItems[2].Text;
+                selectedBook.YearOfPublish = selectedItem.SubItems[3].Text;
+                selectedBook.Price = Convert.ToInt32(selectedItem.SubItems[4].Text);
+                selectedBook.Presence = selectedItem.SubItems[5].Text;
                 selectedBooks.Add(selectedBook);
             }
+            MessageBox.Show("Книга добавлена в корзину!");
         }
     }
 }
