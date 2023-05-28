@@ -142,6 +142,7 @@ namespace Kyrsovaya_Ivan
             this.buttonChooseBasket.TabIndex = 4;
             this.buttonChooseBasket.Text = "Добавить в корзину";
             this.buttonChooseBasket.UseVisualStyleBackColor = true;
+            this.buttonChooseBasket.Click += new System.EventHandler(this.buttonChooseBasket_Click);
             // 
             // buttonBasket
             // 

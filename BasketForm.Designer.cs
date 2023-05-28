@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewBasket = new System.Windows.Forms.ListView();
             this.columnNameBook = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -41,23 +41,23 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listViewBasket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewBasket.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnNameBook,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(777, 355);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewBasket.FullRowSelect = true;
+            this.listViewBasket.GridLines = true;
+            this.listViewBasket.HideSelection = false;
+            this.listViewBasket.Location = new System.Drawing.Point(11, 12);
+            this.listViewBasket.Name = "listView1";
+            this.listViewBasket.Size = new System.Drawing.Size(777, 355);
+            this.listViewBasket.TabIndex = 0;
+            this.listViewBasket.UseCompatibleStateImageBehavior = false;
+            this.listViewBasket.View = System.Windows.Forms.View.Details;
             // 
             // columnNameBook
             // 
@@ -87,7 +87,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.buttonDelet);
             this.panel1.Controls.Add(this.buttonBuy);
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.listViewBasket);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 451);
@@ -121,7 +121,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "BasketForm";
             this.Text = "BasketForm";
-            this.Load += new System.EventHandler(this.BasketForm_Load);
+            //this.Load += new System.EventHandler(this.BasketForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -129,7 +129,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewBasket;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ColumnHeader columnNameBook;
         private System.Windows.Forms.ColumnHeader columnHeader1;

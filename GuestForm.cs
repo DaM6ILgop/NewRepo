@@ -15,13 +15,13 @@ namespace Kyrsovaya_Ivan
     public partial class GuestForm : Form
     {
         static internal Files file = new Files();
-
+        private List<Books> selectedBooks;
         public GuestForm()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             comboBox1.KeyPress += (sender, e) => e.Handled = true;
-           
+
         }
 
         private void RefreshList()
@@ -59,7 +59,6 @@ namespace Kyrsovaya_Ivan
 
         private void buttonBasket_Click(object sender, EventArgs e)
         {
-            BasketForm basketForm = new BasketForm();
             basketForm.Show();
         }
 
@@ -95,6 +94,15 @@ namespace Kyrsovaya_Ivan
                         listView1.Items.Add(book.ToListItem());
                     }
                 }
+            }
+        }
+
+        private void buttonChooseBasket_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem selectedItem in listView1.SelectedItems)
+            {
+                Books selectedBook = (Books)selectedItem.Tag;
+                selectedBooks.Add(selectedBook);
             }
         }
     }

@@ -12,14 +12,22 @@ namespace Kyrsovaya_Ivan
 {
     public partial class BasketForm : Form
     {
-        public BasketForm()
+        private List<Books> selectedBooks;
+
+        public BasketForm(List<Books> selectedBooks)
         {
             InitializeComponent();
+            this.selectedBooks = selectedBooks;
+            RefreshBasketList();
         }
 
-        private void BasketForm_Load(object sender, EventArgs e)
+        public void RefreshBasketList()
         {
-
+            listViewBasket.Items.Clear();
+            foreach (Books book in selectedBooks)
+            {
+                listViewBasket.Items.Add(book.ToListItem());
+            }
         }
     }
 }
