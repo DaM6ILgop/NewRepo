@@ -6,6 +6,7 @@ namespace Kyrsovaya_Ivan
 {
     public partial class AddBook : Form
     {
+       
         internal Files file = new Files();
 
         public AddBook()
@@ -22,17 +23,8 @@ namespace Kyrsovaya_Ivan
             book.BookName = BookName.Text;
             book.Genre = Genre.Text;
             book.Author = Author.Text;
-            int yearOfPublish;
-            if (int.TryParse(YearOfPublish.Text, out yearOfPublish))
-            {
-                book.YearOfPublish = yearOfPublish;
-            }
-            else
-            {
-                // Обработка некорректного ввода для года издания
-                MessageBox.Show("Некорректный ввод года издания!");
-                return;
-            }
+            book.YearOfPublish = dateTimePicker1.Text;
+
             int price;
             if (int.TryParse(Price.Text, out price))
             {
@@ -61,9 +53,6 @@ namespace Kyrsovaya_Ivan
             Form1.adminForm.RefreshList();
             Form1.adminForm.Show();
             this.Close();
-
-          
-
         }
 
         private void AddBook_Load(object sender, EventArgs e)

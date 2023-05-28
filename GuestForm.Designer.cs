@@ -84,7 +84,7 @@ namespace Kyrsovaya_Ivan
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Год издания";
+            this.columnHeader4.Text = "Дата выпуска";
             this.columnHeader4.Width = 130;
             // 
             // columnHeader5

@@ -39,18 +39,8 @@ namespace Kyrsovaya_Ivan
                         book.BookName = BookName.Text;
                         book.Genre = Genre.Text;
                         book.Author = Author.Text;
-
-                        if (int.TryParse(YearOfPublish.Text, out int yearOfPublish))
-                        {
-                            book.YearOfPublish = yearOfPublish;
-                        }
-                        else
-                        {
-                            // Обработка некорректного ввода года издания
-                            MessageBox.Show("Некорректный ввод года издания!");
-                            return;
-                        }
-
+                        book.YearOfPublish = dateTimePicker1.Text;
+                        
                         if (int.TryParse(Price.Text, out int price))
                         {
                             book.Price = price;
