@@ -12,6 +12,7 @@ namespace Kyrsovaya_Ivan
         public AddBook()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             comboBox1.KeyPress += (sender, e) => e.Handled = true;
             Genre.KeyPress += (sender, e) => e.Handled = true;
         }
@@ -48,7 +49,7 @@ namespace Kyrsovaya_Ivan
                 return;
             }
             Form1.list.Add(book);
-            file.WriteToFile("Books.txt");
+            file.WriteToFile("Books.txt", Form1.list);
             file.ReadFromFile("Books.txt");
             Form1.adminForm.RefreshList();
             Form1.adminForm.Show();

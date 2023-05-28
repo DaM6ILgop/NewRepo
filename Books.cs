@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Kyrsovaya_Ivan
 {
-    class Books
+    public class Books
     {
         internal string BookName = "";
         internal string Genre = "";

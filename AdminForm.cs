@@ -12,6 +12,7 @@ namespace Kyrsovaya_Ivan
         public AdminForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         //Метод обновления списка
@@ -54,21 +55,31 @@ namespace Kyrsovaya_Ivan
         {
             try
             {
-                Item = listView1.FocusedItem.Text;
-                foreach (Books row in Form1.list)
+                foreach (ListViewItem selectedItem in listView1.SelectedItems)
                 {
-                    if (row.BookName == AdminForm.Item)
+                    Books selectedBook = new Books();
+                    selectedBook.BookName = selectedItem.SubItems[0].Text;
+                    selectedBook.Genre = selectedItem.SubItems[1].Text;
+                    selectedBook.Author = selectedItem.SubItems[2].Text;
+                    selectedBook.YearOfPublish = selectedItem.SubItems[3].Text;
+                    selectedBook.Price = Convert.ToInt32(selectedItem.SubItems[4].Text);
+                    selectedBook.Presence = selectedItem.SubItems[5].Text;
+                    foreach (Books row in Form1.list)
                     {
-                        int index = Form1.list.IndexOf(row);
-                        Form1.list.RemoveAt(index);
-                        break;
+                        if (row.BookName == selectedBook.BookName && row.Author == selectedBook.Author && row.YearOfPublish == selectedBook.YearOfPublish)
+                        {
+                            int index = Form1.list.IndexOf(row);
+                            Form1.list.RemoveAt(index);
+                            break;
+                        }
                     }
                 }
-                file.WriteToFile("Books.txt");
+                file.WriteToFile("Books.txt", Form1.list);
                 file.ReadFromFile("Books.txt");
                 RefreshList();
+                MessageBox.Show("Книга удалена!");
             }
-            catch { }
+            catch { }          
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
