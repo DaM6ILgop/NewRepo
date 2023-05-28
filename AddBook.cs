@@ -66,7 +66,7 @@ namespace Kyrsovaya_Ivan
         private void ReturnBttn_Click(object sender, EventArgs e)
         {
             Form1.adminForm.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

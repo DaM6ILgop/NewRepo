@@ -142,7 +142,7 @@
             this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.panel1);
             this.Name = "BasketForm";
-            this.Text = "BasketForm";
+            this.Text = "Корзина";
             this.Load += new System.EventHandler(this.BasketForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
