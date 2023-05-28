@@ -53,9 +53,6 @@ namespace Kyrsovaya_Ivan
             Form1.adminForm.RefreshList();
             Form1.adminForm.Show();
             this.Close();
-
-          
-
         }
 
         private void AddBook_Load(object sender, EventArgs e)

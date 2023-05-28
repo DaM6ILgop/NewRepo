@@ -78,9 +78,9 @@ namespace Kyrsovaya_Ivan
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(110, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.Size = new System.Drawing.Size(102, 20);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Дата релиза ";
+            this.label4.Text = "Дата выпуска";
             // 
             // label3
             // 
