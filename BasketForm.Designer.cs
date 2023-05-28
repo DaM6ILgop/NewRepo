@@ -36,10 +36,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonDelet = new System.Windows.Forms.Button();
             this.buttonBuy = new System.Windows.Forms.Button();
+            this.Назад = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // listViewBasket
             // 
             this.listViewBasket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -53,7 +54,7 @@
             this.listViewBasket.GridLines = true;
             this.listViewBasket.HideSelection = false;
             this.listViewBasket.Location = new System.Drawing.Point(11, 12);
-            this.listViewBasket.Name = "listView1";
+            this.listViewBasket.Name = "listViewBasket";
             this.listViewBasket.Size = new System.Drawing.Size(777, 355);
             this.listViewBasket.TabIndex = 0;
             this.listViewBasket.UseCompatibleStateImageBehavior = false;
@@ -85,6 +86,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.Назад);
             this.panel1.Controls.Add(this.buttonDelet);
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.listViewBasket);
@@ -96,9 +98,9 @@
             // buttonDelet
             // 
             this.buttonDelet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelet.Location = new System.Drawing.Point(576, 373);
+            this.buttonDelet.Location = new System.Drawing.Point(198, 374);
             this.buttonDelet.Name = "buttonDelet";
-            this.buttonDelet.Size = new System.Drawing.Size(213, 65);
+            this.buttonDelet.Size = new System.Drawing.Size(176, 65);
             this.buttonDelet.TabIndex = 2;
             this.buttonDelet.Text = "Удалить";
             this.buttonDelet.UseVisualStyleBackColor = true;
@@ -106,12 +108,22 @@
             // buttonBuy
             // 
             this.buttonBuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonBuy.Location = new System.Drawing.Point(11, 373);
+            this.buttonBuy.Location = new System.Drawing.Point(12, 374);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(213, 65);
+            this.buttonBuy.Size = new System.Drawing.Size(170, 65);
             this.buttonBuy.TabIndex = 1;
             this.buttonBuy.Text = "Купить";
             this.buttonBuy.UseVisualStyleBackColor = true;
+            // 
+            // Назад
+            // 
+            this.Назад.Location = new System.Drawing.Point(612, 374);
+            this.Назад.Name = "Назад";
+            this.Назад.Size = new System.Drawing.Size(176, 66);
+            this.Назад.TabIndex = 3;
+            this.Назад.Text = "ReturnBttn";
+            this.Назад.UseVisualStyleBackColor = true;
+            this.Назад.Click += new System.EventHandler(this.Return_bttn_Click);
             // 
             // BasketForm
             // 
@@ -121,7 +133,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "BasketForm";
             this.Text = "BasketForm";
-            //this.Load += new System.EventHandler(this.BasketForm_Load);
+            this.Load += new System.EventHandler(this.BasketForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -137,5 +149,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button buttonDelet;
         private System.Windows.Forms.Button buttonBuy;
+        private System.Windows.Forms.Button Назад;
     }
 }

@@ -57,6 +57,7 @@ namespace Kyrsovaya_Ivan
 
         private void AddBook_Load(object sender, EventArgs e)
         {
+            this.FormClosed += (sender, e) => Application.Exit();
             List<string> genres = GenresClass.GetGenres();
             Genre.Items.AddRange(genres.ToArray());
         }

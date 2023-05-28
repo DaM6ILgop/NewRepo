@@ -12,13 +12,13 @@ namespace Kyrsovaya_Ivan
 {
     public partial class BasketForm : Form
     {
-        public List<Books> selectedBooks;
+        static internal List<Books> selectedBooks = new List<Books>();
 
-        public BasketForm(List<Books> selectedBooks)
+        
+
+        public BasketForm()
         {
             InitializeComponent();
-            this.selectedBooks = selectedBooks;
-            RefreshBasketList();
         }
 
         public void RefreshBasketList()
@@ -28,6 +28,17 @@ namespace Kyrsovaya_Ivan
             {
                 listViewBasket.Items.Add(book.ToListItem());
             }
+        }
+
+        private void BasketForm_Load(object sender, EventArgs e)
+        {
+            /*this.FormClosed += (sender, e) => Application.Exit();*/
+        }
+
+        private void Return_bttn_Click(object sender, EventArgs e)
+        {
+            Form1.guest.Show();
+            this.Hide();
         }
     }
 }
