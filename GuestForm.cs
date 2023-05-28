@@ -15,8 +15,7 @@ namespace Kyrsovaya_Ivan
     public partial class GuestForm : Form
     {
         static internal Files file = new Files();
-        
-
+        static internal List<Books> selectedBooks = new List<Books>();
         public GuestForm()
         {
             InitializeComponent();
@@ -60,8 +59,7 @@ namespace Kyrsovaya_Ivan
 
         private void buttonBasket_Click(object sender, EventArgs e)
         {
-            Form1.basketForm.Show();
-            this.Hide();
+            basketForm.Show();
         }
 
         //СОРТИРОВКА ПО ЖАНРУ
@@ -101,7 +99,11 @@ namespace Kyrsovaya_Ivan
 
         private void buttonChooseBasket_Click(object sender, EventArgs e)
         {
-            
+            foreach (ListViewItem selectedItem in listView1.SelectedItems)
+            {
+                Books selectedBook = (Books)selectedItem.Tag;
+                selectedBooks.Add(selectedBook);
+            }
         }
     }
 }

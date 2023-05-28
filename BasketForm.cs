@@ -12,33 +12,21 @@ namespace Kyrsovaya_Ivan
 {
     public partial class BasketForm : Form
     {
-        static internal List<Books> selectedBooks = new List<Books>();
-
-        
-
+        internal Files file = new Files();
         public BasketForm()
         {
             InitializeComponent();
+            this.selectedBooks = selectedBooks;
+            RefreshBasketList();
         }
 
         public void RefreshBasketList()
         {
             listViewBasket.Items.Clear();
-            foreach (Books book in selectedBooks)
+            foreach (Books book in GuestForm.selectedBooks)
             {
                 listViewBasket.Items.Add(book.ToListItem());
             }
-        }
-
-        private void BasketForm_Load(object sender, EventArgs e)
-        {
-            /*this.FormClosed += (sender, e) => Application.Exit();*/
-        }
-
-        private void Return_bttn_Click(object sender, EventArgs e)
-        {
-            Form1.guest.Show();
-            this.Hide();
         }
     }
 }

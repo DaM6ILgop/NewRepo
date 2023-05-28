@@ -25,14 +25,14 @@ namespace Kyrsovaya_Ivan
             con.convert(TempList);
         }
 
-        public void WriteToFile(string filename)
+        public void WriteToFile(string filename, List<Books> list)
         {
             string FilePath = Directory.GetCurrentDirectory() + "\\" + filename;
             using (StreamWriter streamwriter = new StreamWriter(FilePath, false))
             {
-                for (int i = 0; i < Form1.list.Count; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
-                    string writeStr = Form1.list[i].BookName + " , " + Form1.list[i].Genre + " , " + Form1.list[i].Author + " , " + Form1.list[i].YearOfPublish+ " , " + Form1.list[i].Price + " , " + Form1.list[i].Presence;
+                    string writeStr = list[i].BookName + " , " + list[i].Genre + " , " + list[i].Author + " , " + list[i].YearOfPublish+ " , " + list[i].Price + " , " + list[i].Presence;
                     streamwriter.WriteLine(writeStr);
                 }
             }

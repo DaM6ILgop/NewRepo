@@ -9,7 +9,7 @@ namespace Kyrsovaya_Ivan
 {
     public interface IFiles
     {
-        void WriteToFile(string filename);
+        void WriteToFile(string filename, List<Books> list);
         void ReadFromFile(string filename);
     }
 }
