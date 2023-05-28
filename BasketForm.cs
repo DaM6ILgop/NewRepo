@@ -71,5 +71,11 @@ namespace Kyrsovaya_Ivan
             file.WriteToFile("Cheque.txt", GuestForm.selectedBooks);
             MessageBox.Show("Транзакция прошла!");
         }
+
+        private void ReturnBttn_Click(object sender, EventArgs e)
+        {
+            Form1.guest.Show();
+            this.Close();
+        }
     }
 }

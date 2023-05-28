@@ -114,5 +114,13 @@ namespace Kyrsovaya_Ivan
             }
             MessageBox.Show("Книга добавлена в корзину!");
         }
+
+        static internal Form1 form = new Form1();
+
+        private void returnBttn_Click(object sender, EventArgs e)
+        {          
+            form.Show();
+            this.Hide();
+        }
     }
 }

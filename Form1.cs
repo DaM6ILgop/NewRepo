@@ -13,7 +13,8 @@ namespace Kyrsovaya_Ivan
 
         static internal GuestForm guest = new GuestForm();
         static internal AdminForm adminForm = new AdminForm();
-        static internal BasketForm basketForm = new BasketForm();
+        
+        
 
         static internal List<Books> list = new List<Books>();
 

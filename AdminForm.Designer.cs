@@ -46,16 +46,16 @@ namespace Kyrsovaya_Ivan
             this.DeleteBook = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.EditBtn = new System.Windows.Forms.Button();
+            this.returnBttn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddBook
             // 
             this.AddBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddBook.Location = new System.Drawing.Point(10, 304);
-            this.AddBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddBook.Location = new System.Drawing.Point(553, 404);
             this.AddBook.Name = "AddBook";
-            this.AddBook.Size = new System.Drawing.Size(146, 58);
+            this.AddBook.Size = new System.Drawing.Size(167, 77);
             this.AddBook.TabIndex = 6;
             this.AddBook.Text = "Добавить книгу";
             this.AddBook.UseVisualStyleBackColor = true;
@@ -83,11 +83,10 @@ namespace Kyrsovaya_Ivan
             listViewItem4,
             listViewItem5,
             listViewItem6});
-            this.listView1.Location = new System.Drawing.Point(10, 10);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Location = new System.Drawing.Point(11, 13);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(847, 278);
+            this.listView1.Size = new System.Drawing.Size(967, 369);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -125,10 +124,9 @@ namespace Kyrsovaya_Ivan
             // DeleteBook
             // 
             this.DeleteBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeleteBook.Location = new System.Drawing.Point(710, 304);
-            this.DeleteBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteBook.Location = new System.Drawing.Point(811, 405);
             this.DeleteBook.Name = "DeleteBook";
-            this.DeleteBook.Size = new System.Drawing.Size(146, 58);
+            this.DeleteBook.Size = new System.Drawing.Size(167, 77);
             this.DeleteBook.TabIndex = 10;
             this.DeleteBook.Text = "Удалить книгу";
             this.DeleteBook.UseVisualStyleBackColor = true;
@@ -139,35 +137,43 @@ namespace Kyrsovaya_Ivan
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.returnBttn);
             this.panel1.Controls.Add(this.EditBtn);
             this.panel1.Controls.Add(this.AddBook);
             this.panel1.Controls.Add(this.DeleteBook);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(870, 374);
+            this.panel1.Size = new System.Drawing.Size(994, 499);
             this.panel1.TabIndex = 11;
             // 
             // EditBtn
             // 
             this.EditBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditBtn.Location = new System.Drawing.Point(358, 304);
-            this.EditBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EditBtn.Location = new System.Drawing.Point(280, 404);
             this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(146, 58);
+            this.EditBtn.Size = new System.Drawing.Size(167, 77);
             this.EditBtn.TabIndex = 11;
             this.EditBtn.Text = "Изменить";
             this.EditBtn.UseVisualStyleBackColor = true;
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
+            // returnBttn
+            // 
+            this.returnBttn.Location = new System.Drawing.Point(11, 406);
+            this.returnBttn.Name = "returnBttn";
+            this.returnBttn.Size = new System.Drawing.Size(167, 76);
+            this.returnBttn.TabIndex = 12;
+            this.returnBttn.Text = "Назад";
+            this.returnBttn.UseVisualStyleBackColor = true;
+            this.returnBttn.Click += new System.EventHandler(this.returnBttn_Click);
+            // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 374);
+            this.ClientSize = new System.Drawing.Size(993, 499);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
@@ -188,5 +194,6 @@ namespace Kyrsovaya_Ivan
         internal System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Button returnBttn;
     }
 }

@@ -93,5 +93,11 @@ namespace Kyrsovaya_Ivan
             }
             catch { }
         }
+
+        private void returnBttn_Click(object sender, EventArgs e)
+        {
+            GuestForm.form.Show();
+            this.Hide();
+        }
     }
 }

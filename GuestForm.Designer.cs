@@ -42,6 +42,7 @@ namespace Kyrsovaya_Ivan
             this.buttonChooseBasket = new System.Windows.Forms.Button();
             this.buttonBasket = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.returnBttn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +161,7 @@ namespace Kyrsovaya_Ivan
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.returnBttn);
             this.panel1.Controls.Add(this.buttonBasket);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.buttonChooseBasket);
@@ -170,6 +172,16 @@ namespace Kyrsovaya_Ivan
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(962, 474);
             this.panel1.TabIndex = 6;
+            // 
+            // returnBttn
+            // 
+            this.returnBttn.Location = new System.Drawing.Point(11, 425);
+            this.returnBttn.Name = "returnBttn";
+            this.returnBttn.Size = new System.Drawing.Size(105, 35);
+            this.returnBttn.TabIndex = 6;
+            this.returnBttn.Text = "Назад";
+            this.returnBttn.UseVisualStyleBackColor = true;
+            this.returnBttn.Click += new System.EventHandler(this.returnBttn_Click);
             // 
             // GuestForm
             // 
@@ -203,5 +215,6 @@ namespace Kyrsovaya_Ivan
         private System.Windows.Forms.Button buttonChooseBasket;
         private System.Windows.Forms.Button buttonBasket;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button returnBttn;
     }
 }
