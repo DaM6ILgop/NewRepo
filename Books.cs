@@ -12,15 +12,17 @@ namespace Kyrsovaya_Ivan
         internal string BookName = "";
         internal string Genre = "";
         internal string Author = "";
-        internal int YearOfPublish = 0;
+        internal string YearOfPublish = " ";
         internal int Price = 0;
         internal string Presence = "";
         
 
         internal ListViewItem ToListItem()
         {
-            return new ListViewItem(new string[] { BookName, Genre, Author, Convert.ToString(YearOfPublish), Convert.ToString(Price), Presence});
+            return new ListViewItem(new string[] { BookName, Genre, Author, YearOfPublish, Convert.ToString(Price), Presence});
         }
+
+        
 
     }
 }

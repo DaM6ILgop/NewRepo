@@ -16,7 +16,7 @@ namespace Kyrsovaya_Ivan
                 book.BookName = s[0];
                 book.Genre = s[1]; //Жанры. Надо допилить класс
                 book.Author = s[2];
-                book.YearOfPublish = Convert.ToInt32(s[3]);
+                book.YearOfPublish = s[3];
                 book.Price = Convert.ToInt32(s[4]);
                 book.Presence = s[5];//Наличие книги. Надо добавить
                 Form1.list.Add(book);
